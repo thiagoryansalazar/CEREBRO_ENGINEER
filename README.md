@@ -1,78 +1,98 @@
-# CEREBRO_ENGINEER
+# CEREBRO_ENGINEER_WIKI
 
-AI Memory de estudo para organizar conhecimento técnico, estratégico e operacional.
+## O que é
 
-## Objetivo
+CEREBRO_ENGINEER_WIKI é uma Wiki de contexto, estudo, memória e projetos.
 
-Criar uma base de conhecimento versionada no GitHub para apoiar estudos, projetos pessoais e futuramente aplicações empresariais com agentes de IA.
+Ela existe para transformar conversas, estudos, decisões e erros em conhecimento organizado e reutilizável.
 
-A memória deve responder quatro perguntas:
+## Por que existe
 
-1. O que eu estudei?
-2. O que eu entendi?
-3. Onde isso se aplica?
-4. O que ainda preciso revisar?
+Durante o desenvolvimento de projetos, muitas decisões importantes ficam presas em chats. Quando o chat termina, o contexto se perde.
 
-## Estrutura
+Esta Wiki resolve esse problema registrando:
 
-```text
-CEREBRO_ENGINEER/
-├── AGENTS.md
-├── README.md
-├── INDEX.md
-├── 00_ROTINA_DE_ESTUDO/
-├── 01_IA_E_AGENTES/
-├── 02_PYTHON/
-├── 03_ARQUITETURA/
-├── 04_DADOS/
-├── 05_NEGOCIOS_E_PRODUTO/
-├── 06_ENGENHARIA/
-├── 07_PROJETOS/
-├── 08_REFERENCIAS/
-├── 90_TEMPLATES/
-└── 99_INDEFINIDOS/
-```
+- contexto;
+- decisões;
+- arquitetura;
+- erros e soluções;
+- referências;
+- dúvidas;
+- procedimentos;
+- próximos passos;
+- aprendizados.
+
+## O que a Wiki faz
+
+A Wiki funciona como memória de longo prazo:
+
+1. o ChatGPT ajuda a construir raciocínio;
+2. as informações importantes são enviadas ao GitHub;
+3. a Wiki organiza o contexto;
+4. Codex e Claude consultam a Wiki;
+5. os projetos são desenvolvidos com base nas decisões já tomadas.
+
+## Conteúdos que devem entrar
+
+- conteúdo de estudo e de projetos;
+- erros e soluções;
+- decisões;
+- referências externas;
+- procedimentos;
+- dúvidas abertas;
+- sugestões de agentes;
+- próximos passos.
+
+Não devem entrar sem tratamento:
+
+- transcrições brutas sem síntese;
+- ideias confusas sem classificação;
+- conteúdo duplicado;
+- decisão sem contexto;
+- link externo sem resumo.
+
+## Como enviar informações dos chats
+
+Use o comando:
+
+> Envie esta informação para o @GitHub no repositório CEREBRO_ENGINEER_WIKI, seguindo o README.md, o TREE_DECISION.md e atualizando o SUMMARY.md se criar novo arquivo.
+
+O agente deve:
+
+1. identificar o tipo de informação;
+2. consultar o `TREE_DECISION.md`;
+3. escolher o arquivo correto;
+4. escrever em Markdown;
+5. atualizar o `SUMMARY.md` se criar novo arquivo;
+6. atualizar o `LOG.md` em alteração relevante;
+7. não salvar informação solta sem classificação.
+
+## Como Codex e Claude devem usar
+
+Antes de executar tarefas de projeto, consultar:
+
+1. `README.md`;
+2. `AGENTS.md` ou `CLAUDE.md`;
+3. `TREE_DECISION.md`;
+4. `SUMMARY.md`;
+5. `INDEX.md`;
+6. arquivos específicos do projeto.
+
+Para projetos, consultar primeiro `contexto_geral.md`, `decisoes.md`, `arquitetura.md`, `erros_e_solucoes.md` e `proximos_passos.md`.
+
+## Como manter organizada
+
+Markdown é a fonte da verdade. Toda informação precisa de categoria, contexto e finalidade. Novas páginas entram no `SUMMARY.md`; mudanças relevantes entram no `LOG.md`.
 
 ## Regra principal
 
-Não usar este repositório como depósito de arquivos soltos.
+A Wiki não é depósito. A Wiki é memória organizada.
 
-Cada conteúdo importante deve ter:
+Toda informação deve responder pelo menos uma pergunta:
 
-- título;
-- resumo;
-- entendimento próprio;
-- aplicação prática;
-- dúvidas abertas;
-- tags.
-
-## Fluxo de uso com agentes
-
-```text
-Pergunta do usuário
-↓
-Agente lê AGENTS.md
-↓
-Agente consulta INDEX.md
-↓
-Agente procura arquivos relevantes
-↓
-Agente complementa com web se necessário
-↓
-Agente gera resposta aplicada ao contexto do usuário
-```
-
-## Foco de carreira
-
-Este AI Memory apoia a formação do usuário como AI Product Engineer.
-
-Prioridades:
-
-- IA aplicada;
-- arquitetura de sistemas;
-- Python;
-- dados;
-- agentes de IA;
-- automações;
-- produto;
-- processos empresariais.
+1. O que isso explica?
+2. Que decisão isso registra?
+3. Que erro isso evita?
+4. Que projeto isso melhora?
+5. Que estudo isso consolida?
+6. Que ação isso orienta?

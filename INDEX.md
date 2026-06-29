@@ -1,54 +1,30 @@
-# INDEX - CEREBRO_ENGINEER
+# INDEX - CEREBRO_ENGINEER_WIKI
 
-## Foco principal
+## Navegação central
 
-Base de estudo para evoluir como AI Product Engineer.
+- [README](README.md)
+- [Regras para agentes](AGENTS.md)
+- [Claude Code](CLAUDE.md)
+- [Sumário de páginas](SUMMARY.md)
+- [Árvore de decisão](TREE_DECISION.md)
+- [Log de alterações](LOG.md)
 
 ## Áreas
 
-### 00_ROTINA_DE_ESTUDO
-Controle de estudos, revisões, dúvidas e roadmap.
+- [00_ROTINA_DE_ESTUDO](00_ROTINA_DE_ESTUDO/)
+- [01_IA_E_AGENTES](01_IA_E_AGENTES/)
+- [02_PYTHON](02_PYTHON/)
+- [03_ARQUITETURA](03_ARQUITETURA/)
+- [04_DADOS](04_DADOS/)
+- [05_NEGOCIOS_E_PRODUTO](05_NEGOCIOS_E_PRODUTO/)
+- [06_ENGENHARIA](06_ENGENHARIA/)
+- [07_PROJETOS](07_PROJETOS/)
+- [08_REFERENCIAS](08_REFERENCIAS/)
+- [09_PROCEDIMENTOS](09_PROCEDIMENTOS/)
+- [90_TEMPLATES](90_TEMPLATES/)
+- [99_INDEFINIDOS](99_INDEFINIDOS/)
 
-### 01_IA_E_AGENTES
-IA, LLMs, agentes, RAG, memória, Codex e automações inteligentes.
+## Projetos
 
-### 02_PYTHON
-Python para automação, dados, APIs e IA.
-
-### 03_ARQUITETURA
-Arquitetura de software, APIs, REST, mensageria, banco de dados e integrações.
-
-### 04_DADOS
-SQL, modelagem, ETL, dashboards, Power BI, Excel e indicadores.
-
-### 05_NEGOCIOS_E_PRODUTO
-Produto, MVP, validação, ROI, pitch, proposta de valor e estratégia.
-
-### 06_ENGENHARIA
-Engenharia de Produção, qualidade, PDCA, Kanban, SLA, KPI e fluxos.
-
-### 07_PROJETOS
-Projetos reais:
-
-- LOG_VENCIMENTOS
-- ALI_Consultora
-- CSC_AUTOMACOES
-- BITRIX24
-- CEREBRO_ENGINEER
-
-### 08_REFERENCIAS
-Sites, artigos, vídeos, PDFs, cursos e materiais externos.
-
-### 90_TEMPLATES
-Modelos de anotação, estudo, projeto, decisão e referência.
-
-### 99_INDEFINIDOS
-Materiais que ainda precisam ser classificados.
-
-## Regra de consulta
-
-1. Entender o tema da pergunta.
-2. Buscar a pasta correta.
-3. Ler o arquivo específico.
-4. Complementar com fonte externa se o assunto exigir atualização.
-5. Responder conectando conceito, aplicação e projetos do usuário.
+- [LOG_VENCIMENTOS](07_PROJETOS/LOG_VENCIMENTOS/index.md)
+- [ALI_CONSULTORA](07_PROJETOS/ALI_CONSULTORA/index.md)
