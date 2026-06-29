@@ -1,30 +1,20 @@
-# INDEX - CEREBRO_ENGINEER_WIKI
+# INDEX - Wiki de Contextos
 
 ## Navegação central
 
-- [README](README.md)
+- [Visão geral](README.md)
 - [Regras para agentes](AGENTS.md)
 - [Claude Code](CLAUDE.md)
-- [Sumário de páginas](SUMMARY.md)
+- [Sumário completo](SUMMARY.md)
 - [Árvore de decisão](TREE_DECISION.md)
-- [Log de alterações](LOG.md)
+- [Log](LOG.md)
 
-## Áreas
+## Vertentes
 
-- [00_ROTINA_DE_ESTUDO](00_ROTINA_DE_ESTUDO/)
-- [01_IA_E_AGENTES](01_IA_E_AGENTES/)
-- [02_PYTHON](02_PYTHON/)
-- [03_ARQUITETURA](03_ARQUITETURA/)
-- [04_DADOS](04_DADOS/)
-- [05_NEGOCIOS_E_PRODUTO](05_NEGOCIOS_E_PRODUTO/)
-- [06_ENGENHARIA](06_ENGENHARIA/)
-- [07_PROJETOS](07_PROJETOS/)
-- [08_REFERENCIAS](08_REFERENCIAS/)
-- [09_PROCEDIMENTOS](09_PROCEDIMENTOS/)
-- [90_TEMPLATES](90_TEMPLATES/)
-- [99_INDEFINIDOS](99_INDEFINIDOS/)
-
-## Projetos
-
-- [LOG_VENCIMENTOS](07_PROJETOS/LOG_VENCIMENTOS/index.md)
-- [ALI_CONSULTORA](07_PROJETOS/ALI_CONSULTORA/index.md)
+- [Wiki de estudos](01_WIKI_ESTUDOS/index.md)
+- [Wiki de projetos](02_WIKI_PROJETOS/)
+- [Wiki de referências](03_WIKI_REFERENCIAS/index.md)
+- [Wiki de procedimentos](04_WIKI_PROCEDIMENTOS/index.md)
+- [Agentes](05_AGENTES/)
+- [Templates](90_TEMPLATES/)
+- [Indefinidos](99_INDEFINIDOS/index.md)

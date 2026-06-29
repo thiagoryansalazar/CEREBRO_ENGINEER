@@ -1,0 +1,10 @@
+agents:
+  - id: chatgpt
+    nome: ChatGPT
+    papel: planejamento_e_sintese
+  - id: codex
+    nome: Codex
+    papel: execucao_e_revisao
+  - id: claude
+    nome: Claude
+    papel: analise_e_execucao

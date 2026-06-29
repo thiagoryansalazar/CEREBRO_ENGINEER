@@ -1,50 +1,50 @@
 # SUMMARY - CEREBRO_ENGINEER_WIKI
 
-## Objetivo
-
-Sumário navegável da Wiki.
-
 ## Arquivos centrais
 
-- `README.md` — visão geral e uso.
-- `AGENTS.md` — regras para agentes e Codex.
-- `CLAUDE.md` — entrada para Claude Code.
-- `INDEX.md` — mapa geral por áreas.
-- `TREE_DECISION.md` — classificação de informações.
-- `LOG.md` — histórico cronológico.
+- `README.md` — propósito e fluxo da Wiki de Contextos.
+- `AGENTS.md` — regras obrigatórias de curadoria.
+- `CLAUDE.md` — entrada compatível com Claude.
+- `INDEX.md` — mapa de navegação.
+- `TREE_DECISION.md` — classificação e destino.
+- `LOG.md` — histórico de mudanças.
 
-## Estudos
+## 01_WIKI_ESTUDOS
 
-- `00_ROTINA_DE_ESTUDO/roadmap_ai_product_engineer.md` — direção de estudo.
-- `00_ROTINA_DE_ESTUDO/plano_semanal.md` — planejamento semanal.
-- `00_ROTINA_DE_ESTUDO/revisoes.md` — revisões de estudo.
-- `00_ROTINA_DE_ESTUDO/duvidas_abertas.md` — dúvidas não resolvidas.
+- `index.md` — objetivo, roadmap e navegação.
+- `ia_e_agentes.md`, `python.md`, `arquitetura.md`, `dados.md`, `negocios_e_produto.md`, `engenharia.md` — contextos consolidados por tema.
+- `duvidas_abertas.md` — questões pendentes.
+- `revisoes.md` — revisões de aprendizado.
 
-## Projetos
+## 02_WIKI_PROJETOS
 
-### LOG_VENCIMENTOS
+- `LOG_VENCIMENTOS/` — contexto, decisões, arquitetura, fluxos, produto, erros, sugestões e próximos passos.
+- `ALI_CONSULTORA/` — contexto, decisões, arquitetura, produto, erros, sugestões e próximos passos.
 
-- `index.md`, `log.md`, `contexto_geral.md`, `decisoes.md`, `arquitetura.md`, `fluxos.md`, `produto.md`, `erros_e_solucoes.md`, `sugestoes.md` e `proximos_passos.md`.
+## 03_WIKI_REFERENCIAS
 
-### ALI_CONSULTORA
+- `index.md` — regras e navegação.
+- `artigos.md`, `repositorios.md`, `videos.md`, `cursos.md`, `documentacoes.md` — referências resumidas por tipo.
 
-- `index.md`, `log.md`, `contexto_geral.md`, `decisoes.md`, `arquitetura.md`, `produto.md`, `erros_e_solucoes.md`, `sugestoes.md` e `proximos_passos.md`.
+## 04_WIKI_PROCEDIMENTOS
 
-## Referências e procedimentos
+- `index.md` — catálogo de procedimentos.
+- `como_enviar_contexto_para_wiki.md`
+- `como_criar_pacote_de_memoria.md`
+- `como_preparar_contexto_para_codex.md`
+- `como_revisar_projeto_com_agente.md`
 
-- `08_REFERENCIAS/` — fontes externas consolidadas.
-- `09_PROCEDIMENTOS/` — padrões operacionais reutilizáveis.
+## 05_AGENTES
 
-## Templates
+- `id_agentes.yaml` — identificadores conhecidos.
+- `regras_de_identificacao.md` — regras de autoria e rastreabilidade.
+- `sugestoes_globais.md` — sugestões não específicas de projeto.
 
-- `template_nota_de_estudo.md`
-- `template_pacote_memoria.md`
-- `template_decisao.md`
-- `template_erro_solucao.md`
-- `template_sugestao.md`
-- `template_referencia.md`
-- `template_procedimento.md`
+## 90_TEMPLATES
 
-## Indefinidos
+- templates de contexto de estudo e projeto, pacote de memória, decisão, erro, sugestão, referência e procedimento.
 
-- `99_INDEFINIDOS/` — conteúdo ainda sem classificação.
+## 99_INDEFINIDOS
+
+- `index.md` — regras de triagem.
+- `inbox.md` — conteúdo legado ou ainda não classificado.

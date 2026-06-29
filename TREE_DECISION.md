@@ -1,22 +1,19 @@
-# TREE_DECISION - Árvore de Decisão da Wiki
+# TREE_DECISION - Wiki de Contextos
 
-Use este arquivo antes de salvar qualquer informação.
+## 1. É contexto de estudo?
 
-## 1. É estudo pessoal?
+- IA e agentes → `01_WIKI_ESTUDOS/ia_e_agentes.md`
+- Python → `01_WIKI_ESTUDOS/python.md`
+- Arquitetura → `01_WIKI_ESTUDOS/arquitetura.md`
+- Dados → `01_WIKI_ESTUDOS/dados.md`
+- Negócios e produto → `01_WIKI_ESTUDOS/negocios_e_produto.md`
+- Engenharia → `01_WIKI_ESTUDOS/engenharia.md`
+- Dúvida → `01_WIKI_ESTUDOS/duvidas_abertas.md`
+- Revisão → `01_WIKI_ESTUDOS/revisoes.md`
 
-- IA ou agentes → `01_IA_E_AGENTES/`
-- Python → `02_PYTHON/`
-- Arquitetura → `03_ARQUITETURA/`
-- Dados → `04_DADOS/`
-- Negócios ou produto → `05_NEGOCIOS_E_PRODUTO/`
-- Engenharia ou processos → `06_ENGENHARIA/`
-- Dúvida → `00_ROTINA_DE_ESTUDO/duvidas_abertas.md`
-- Revisão → `00_ROTINA_DE_ESTUDO/revisoes.md`
-- Rotina ou planejamento → `00_ROTINA_DE_ESTUDO/`
+## 2. É contexto de projeto?
 
-## 2. É sobre projeto?
-
-Em `07_PROJETOS/<PROJETO>/`, usar:
+Salvar em `02_WIKI_PROJETOS/<PROJETO>/`:
 
 - contexto → `contexto_geral.md`
 - decisão → `decisoes.md`
@@ -25,24 +22,24 @@ Em `07_PROJETOS/<PROJETO>/`, usar:
 - produto → `produto.md`
 - erro e solução → `erros_e_solucoes.md`
 - sugestão → `sugestoes.md`
-- próximo passo → `proximos_passos.md`
+- ação → `proximos_passos.md`
 
-## 3. É erro com aprendizado?
+## 3. É referência externa?
 
-Salvar em `07_PROJETOS/<PROJETO>/erros_e_solucoes.md`. Sem projeto associado, salvar em `09_PROCEDIMENTOS/`.
+Salvar por tipo em `03_WIKI_REFERENCIAS/`, sempre com link, resumo, ideias e aplicação.
 
-## 4. É referência externa?
+## 4. É procedimento reutilizável?
 
-Salvar em `08_REFERENCIAS/` com título, link, resumo, ideias principais, aplicação e tags.
+Salvar em `04_WIKI_PROCEDIMENTOS/`.
 
-## 5. É procedimento reutilizável?
+## 5. É informação sobre um agente?
 
-Salvar em `09_PROCEDIMENTOS/`.
+Identificação → `05_AGENTES/id_agentes.yaml`; regra → `regras_de_identificacao.md`; sugestão geral → `sugestoes_globais.md`.
 
-## 6. Ainda não tem categoria?
+## 6. Não tem categoria?
 
-Salvar em `99_INDEFINIDOS/` e registrar sugestão de classificação.
+Salvar em `99_INDEFINIDOS/inbox.md` com origem e sugestão de destino.
 
-## 7. Criou novo arquivo?
+## 7. Criou arquivo ou mudou estrutura?
 
 Atualizar `SUMMARY.md` e `LOG.md`.

@@ -1,8 +1,8 @@
 # AGENTS.md - CEREBRO_ENGINEER_WIKI
 
-## Papel do agente
+## Papel
 
-Este repositório é uma Wiki de contexto, estudo, memória e projetos. O agente deve atuar como curador da memória e manter a Wiki útil, navegável e confiável.
+Atue como curador de uma Wiki de Contextos. Preserve memória útil, mantenha páginas pequenas e diferencie contexto, decisão, erro, procedimento e sugestão.
 
 ## Ordem de leitura
 
@@ -10,51 +10,32 @@ Este repositório é uma Wiki de contexto, estudo, memória e projetos. O agente
 2. `TREE_DECISION.md`
 3. `SUMMARY.md`
 4. `INDEX.md`
-5. arquivo específico relacionado ao tema
+5. página específica
 
-## Regras principais
+## Regras obrigatórias
 
 1. Markdown é a fonte da verdade.
 2. Não salvar informação sem classificação.
-3. Não misturar estudo pessoal com projeto.
-4. Não tratar hipótese como decisão.
-5. Não tratar chat como verdade final.
-6. Diferenciar fato, hipótese, decisão, sugestão, erro e dúvida.
-7. Se criar um novo arquivo, atualizar `SUMMARY.md`.
-8. Se fizer alteração relevante, atualizar `LOG.md`.
-9. Se encontrar inconsistência, registrar em `sugestoes.md`.
-10. Se identificar erro superado, registrar em `erros_e_solucoes.md`.
-11. Não apagar conteúdo antigo sem justificativa.
-12. Não duplicar conteúdo existente.
-13. Se não souber onde salvar, usar `99_INDEFINIDOS/` e registrar sugestão de classificação.
+3. Não tratar hipótese ou sugestão como decisão.
+4. Não copiar chat bruto; consolidar contexto.
+5. Não duplicar conteúdo existente.
+6. Não apagar memória útil sem justificativa.
+7. Todo novo arquivo deve ser registrado no `SUMMARY.md`.
+8. Toda alteração relevante deve ser registrada no `LOG.md`.
+9. Erros resolvidos vão para `erros_e_solucoes.md`.
+10. Sugestões mantêm identificação e status, sem aplicação automática.
+11. Conteúdo sem destino claro vai para `99_INDEFINIDOS/inbox.md`.
 
-## Como classificar informação
+## Destinos
 
-Use `TREE_DECISION.md`.
-
-## Decisões
-
-Salvar em `07_PROJETOS/<PROJETO>/decisoes.md`, contendo contexto, decisão, justificativa, impacto e data.
-
-## Erros e soluções
-
-Salvar em `07_PROJETOS/<PROJETO>/erros_e_solucoes.md`, contendo erro, motivo do bloqueio, solução, aprendizado e prevenção.
-
-## Sugestões
-
-Salvar em `07_PROJETOS/<PROJETO>/sugestoes.md`. Não aplicar automaticamente sugestões que alterem decisões ou arquitetura.
-
-## Referências
-
-Salvar em `08_REFERENCIAS/`, contendo título, link, resumo, ideias principais, aplicação nos projetos e tags.
-
-## Relação com Codex
-
-Antes de implementar, consultar a Wiki. Para `LOG_VENCIMENTOS` e `ALI_CONSULTORA`, ler `contexto_geral.md`, `decisoes.md`, `arquitetura.md`, `erros_e_solucoes.md` e `proximos_passos.md`.
+- estudos → `01_WIKI_ESTUDOS/`
+- projetos → `02_WIKI_PROJETOS/`
+- referências → `03_WIKI_REFERENCIAS/`
+- procedimentos → `04_WIKI_PROCEDIMENTOS/`
+- agentes e sugestões globais → `05_AGENTES/`
 
 ## Restrições
 
-- Não criar banco de dados, servidor ou MCP agora.
-- Não implementar infraestrutura complexa ou autoaperfeiçoamento.
-- Manter tudo em Markdown.
-- Priorizar síntese útil.
+- Não criar banco de dados, servidor, MCP ou automação complexa.
+- Não alterar outros repositórios.
+- Manter a solução simples e versionada.

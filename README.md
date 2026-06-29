@@ -2,97 +2,54 @@
 
 ## O que é
 
-CEREBRO_ENGINEER_WIKI é uma Wiki de contexto, estudo, memória e projetos.
+Esta é uma Wiki de Contextos: uma memória Markdown, versionada e consultável para registrar o que precisa sobreviver aos chats e orientar trabalho futuro.
 
-Ela existe para transformar conversas, estudos, decisões e erros em conhecimento organizado e reutilizável.
+Ela combina quatro vertentes:
+
+1. **AI Memory do Akita** — memória útil, decisões, erros, soluções e procedimentos.
+2. **Wiki estilo Karpathy** — Markdown versionado, índices, log e páginas pequenas.
+3. **AgentMemory** — separação explícita entre contexto, decisão, erro, procedimento e sugestão.
+4. **Fluxo pessoal** — ChatGPT planeja, GitHub registra e Codex executa.
 
 ## Por que existe
 
-Durante o desenvolvimento de projetos, muitas decisões importantes ficam presas em chats. Quando o chat termina, o contexto se perde.
+Contextos importantes nascem em conversas, estudos e projetos, mas se perdem quando ficam presos no chat. A Wiki transforma esse material em conhecimento consolidado, classificado e reutilizável.
 
-Esta Wiki resolve esse problema registrando:
+## O que registrar
 
-- contexto;
-- decisões;
-- arquitetura;
-- erros e soluções;
-- referências;
-- dúvidas;
-- procedimentos;
-- próximos passos;
-- aprendizados.
+- contextos de estudo e projeto;
+- decisões e justificativas;
+- erros, soluções e aprendizados;
+- procedimentos reutilizáveis;
+- referências resumidas;
+- sugestões identificadas por agente;
+- próximos passos e dúvidas abertas.
 
-## O que a Wiki faz
+Não registrar transcrição bruta, conteúdo duplicado, link sem resumo ou hipótese apresentada como decisão.
 
-A Wiki funciona como memória de longo prazo:
+## Fluxo
 
-1. o ChatGPT ajuda a construir raciocínio;
-2. as informações importantes são enviadas ao GitHub;
-3. a Wiki organiza o contexto;
-4. Codex e Claude consultam a Wiki;
-5. os projetos são desenvolvidos com base nas decisões já tomadas.
+```text
+ChatGPT planeja e sintetiza
+→ GitHub registra e versiona
+→ Codex executa com o contexto consolidado
+```
 
-## Conteúdos que devem entrar
-
-- conteúdo de estudo e de projetos;
-- erros e soluções;
-- decisões;
-- referências externas;
-- procedimentos;
-- dúvidas abertas;
-- sugestões de agentes;
-- próximos passos.
-
-Não devem entrar sem tratamento:
-
-- transcrições brutas sem síntese;
-- ideias confusas sem classificação;
-- conteúdo duplicado;
-- decisão sem contexto;
-- link externo sem resumo.
-
-## Como enviar informações dos chats
-
-Use o comando:
+## Como enviar contexto para a Wiki
 
 > Envie esta informação para o @GitHub no repositório CEREBRO_ENGINEER_WIKI, seguindo o README.md, o TREE_DECISION.md e atualizando o SUMMARY.md se criar novo arquivo.
 
-O agente deve:
+O agente deve classificar a informação, escolher uma página pequena e específica, escrever em Markdown, atualizar o `SUMMARY.md` ao criar arquivo e registrar mudanças relevantes no `LOG.md`.
 
-1. identificar o tipo de informação;
-2. consultar o `TREE_DECISION.md`;
-3. escolher o arquivo correto;
-4. escrever em Markdown;
-5. atualizar o `SUMMARY.md` se criar novo arquivo;
-6. atualizar o `LOG.md` em alteração relevante;
-7. não salvar informação solta sem classificação.
+## Ordem de consulta
 
-## Como Codex e Claude devem usar
-
-Antes de executar tarefas de projeto, consultar:
-
-1. `README.md`;
-2. `AGENTS.md` ou `CLAUDE.md`;
-3. `TREE_DECISION.md`;
-4. `SUMMARY.md`;
-5. `INDEX.md`;
-6. arquivos específicos do projeto.
-
-Para projetos, consultar primeiro `contexto_geral.md`, `decisoes.md`, `arquitetura.md`, `erros_e_solucoes.md` e `proximos_passos.md`.
-
-## Como manter organizada
-
-Markdown é a fonte da verdade. Toda informação precisa de categoria, contexto e finalidade. Novas páginas entram no `SUMMARY.md`; mudanças relevantes entram no `LOG.md`.
+1. `README.md`
+2. `AGENTS.md` ou `CLAUDE.md`
+3. `TREE_DECISION.md`
+4. `SUMMARY.md`
+5. `INDEX.md`
+6. contexto específico
 
 ## Regra principal
 
-A Wiki não é depósito. A Wiki é memória organizada.
-
-Toda informação deve responder pelo menos uma pergunta:
-
-1. O que isso explica?
-2. Que decisão isso registra?
-3. Que erro isso evita?
-4. Que projeto isso melhora?
-5. Que estudo isso consolida?
-6. Que ação isso orienta?
+A Wiki não é depósito. Toda entrada deve explicar algo, registrar uma decisão, evitar um erro, consolidar estudo ou orientar uma ação.
