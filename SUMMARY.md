@@ -36,8 +36,9 @@
 
 ## 05_AGENTES
 
-- `id_agentes.yaml` — identificadores conhecidos.
-- `regras_de_identificacao.md` — regras de autoria e rastreabilidade.
+- `id_agentes.yaml` — identificadores de agentes formais.
+- `id_auxiliares.yaml` — identificadores de chatbots auxiliares de construção.
+- `regras_de_identificacao.md` — distinção, autoria e rastreabilidade.
 - `sugestoes_globais.md` — sugestões não específicas de projeto.
 
 ## 90_TEMPLATES

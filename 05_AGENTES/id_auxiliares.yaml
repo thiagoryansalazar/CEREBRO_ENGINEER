@@ -1,0 +1,64 @@
+auxiliares:
+  - id: aux_log_vencimentos_ai_architect
+    nome: AI ARCHITECT
+    data_inclusao: "2026-06-30"
+    projeto_origem: LOG_VENCIMENTOS
+    chat_origem: AI ARCHITECT
+    tipo: chatbot_auxiliar_de_construcao_teorica
+    pode_ser_transformado_em_agente: true
+
+  - id: aux_log_vencimentos_engenheiro_producao
+    nome: Engenheiro de Produção
+    data_inclusao: "2026-06-30"
+    projeto_origem: LOG_VENCIMENTOS
+    chat_origem: Engenheiro de Produção
+    tipo: chatbot_auxiliar_de_construcao_teorica
+    pode_ser_transformado_em_agente: true
+
+  - id: aux_log_vencimentos_esp32_hardware
+    nome: ESP32 - HARDWARE
+    data_inclusao: "2026-06-30"
+    projeto_origem: LOG_VENCIMENTOS
+    chat_origem: ESP32 - HARDWARE
+    tipo: chatbot_auxiliar_de_construcao_teorica
+    pode_ser_transformado_em_agente: true
+
+  - id: aux_log_vencimentos_fluxo_tecnico
+    nome: FLUXO_LOG_VENCIMENTOS
+    data_inclusao: "2026-06-30"
+    projeto_origem: LOG_VENCIMENTOS
+    chat_origem: FLUXO_LOG_VENCIMENTOS
+    tipo: chatbot_auxiliar_de_construcao_teorica
+    pode_ser_transformado_em_agente: true
+
+  - id: aux_log_vencimentos_product_owner
+    nome: PRODUCT OWNER
+    data_inclusao: "2026-06-30"
+    projeto_origem: LOG_VENCIMENTOS
+    chat_origem: PRODUCT OWNER
+    tipo: chatbot_auxiliar_de_construcao_teorica
+    pode_ser_transformado_em_agente: true
+
+  - id: aux_log_vencimentos_contexto_geral
+    nome: CONTEXTO_GERAL
+    data_inclusao: "2026-06-30"
+    projeto_origem: LOG_VENCIMENTOS
+    chat_origem: CONTEXTO_GERAL
+    tipo: chatbot_auxiliar_de_construcao_teorica
+    pode_ser_transformado_em_agente: true
+
+  - id: aux_log_vencimentos_termo_abertura
+    nome: TERMO DE ABERTURA
+    data_inclusao: "2026-06-30"
+    projeto_origem: LOG_VENCIMENTOS
+    chat_origem: TERMO DE ABERTURA
+    tipo: chatbot_auxiliar_de_construcao_teorica
+    pode_ser_transformado_em_agente: true
+
+  - id: aux_log_vencimentos_fluxo_geral
+    nome: FLUXO GERAL DE FUNCIONAMENTO DO SISTEMA
+    data_inclusao: "2026-06-30"
+    projeto_origem: LOG_VENCIMENTOS
+    chat_origem: FLUXO GERAL DE FUNCIONAMENTO DO SISTEMA
+    tipo: chatbot_auxiliar_de_construcao_teorica
+    pode_ser_transformado_em_agente: true
