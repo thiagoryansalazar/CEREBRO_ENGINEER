@@ -12,3 +12,4 @@
 - [2026-06-28] refatoração | repositório completo | reorganizado como CEREBRO_ENGINEER_WIKI | Codex
 - [2026-06-28] refatoração | estrutura completa | substituída base por Wiki de Contextos em cinco vertentes operacionais | Codex
 - [2026-06-29] consolidação | 02_WIKI_PROJETOS/LOG_VENCIMENTOS | consolidados oito chats do projeto em contexto, decisões, arquitetura, fluxos, produto, erros, sugestões e próximos passos | ChatGPT/Codex
+- [2026-06-29] identificação | 05_AGENTES/id_agentes.yaml e sugestoes_globais.md | registrados IDs, origem, comportamento e contribuição dos oito chats especializados do LOG_VENCIMENTOS | ChatGPT/Codex
