@@ -1,5 +1,71 @@
 # Arquitetura - LOG_VENCIMENTOS
 
+## Integração orientada a eventos — 2026-07-01
+
+A arquitetura passa a explicitar uma `Camada de Integração Externa` entre os
+sistemas de origem e o núcleo do LOG_VENCIMENTOS.
+
+```text
+Sistemas de origem
+  ├─ ERP
+  ├─ WMS
+  ├─ MES
+  ├─ LIMS
+  ├─ CMMS/EAM
+  ├─ QMS
+  ├─ DMS/GED
+  └─ arquivos e APIs externas
+        ↓
+Camada de Integração Externa
+  ├─ Webhook Receiver
+  ├─ API Connector
+  ├─ File Importer
+  ├─ Database Reader
+  ├─ Event Consumer
+  └─ Field Mapper
+        ↓
+Validador e normalizador
+        ↓
+Modelo canônico LOG_VENCIMENTOS
+        ↓
+Motor de monitoramento
+        ↓
+Central de notificações
+```
+
+O modo preferencial é orientado a eventos:
+
+```text
+Evento no sistema de origem
+  → webhook
+  → receptor de eventos
+  → fila de processamento
+  → adaptador da fonte
+  → normalizador
+  → monitoramento
+  → notificações
+```
+
+O evento pode transportar apenas o identificador e os dados mínimos da mudança;
+o adaptador consulta os dados completos na fonte autorizada. O contrato exato do
+evento ainda precisa ser validado.
+
+O adaptador não deve consultar o ERP continuamente. Ele atua após um evento ou,
+quando a fonte não oferece eventos, por uma alternativa configurada:
+
+1. webhook ou consumo de evento;
+2. consulta agendada por API ou banco somente leitura;
+3. importação de arquivo CSV/XLSX ou outro formato acordado.
+
+A integração depende da porta disponível — webhook, API, banco, arquivo ou fila
+— e não da linguagem em que o sistema de origem foi implementado. Sistemas em
+PHP, Java, Node.js, Elixir, Delphi, .NET ou outras tecnologias podem ser
+integrados se expuserem uma interface autorizada e estável.
+
+A representação de 2026-06-30 continua válida como visão conceitual. A revisão
+de 2026-07-01 refina como o `Adaptador de Consulta ERP` é acionado e generaliza
+a entrada para outras categorias de sistema.
+
 ## Arquitetura geral atualizada em 2026-06-30
 
 O desenho geral separa quatro domínios:
@@ -111,6 +177,13 @@ mapeador, validador e normalizador.
 
 Produto e lote são entidades diferentes: produto é relativamente estável; lote,
 quantidade, validade e localização variam.
+
+### Proposta de generalização do contrato
+
+Para permitir outros domínios no futuro, foram sugeridos os campos
+`entidade_monitorada`, `tipo_vencimento` e `data_limite`. Essa é uma proposta de
+arquitetura, ainda sujeita a validação. Ela não substitui automaticamente o
+contrato executável atual baseado em produto, lote e data de validade.
 
 ## Base técnica definida nos fluxos
 
