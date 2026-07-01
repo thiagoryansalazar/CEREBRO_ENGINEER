@@ -62,6 +62,20 @@ continua dependendo da confirmação humana.
 - apoio à conferência e à decisão;
 - memória operacional e histórico.
 
+O setor alimentício e o monitoramento de validade de produtos permanecem como o
+primeiro caso de uso e o escopo executável atual.
+
+## Visão futura de domínio
+
+A arquitetura deve permitir, após validação do produto atual, monitorar outros
+tipos de vencimento, prazo, conformidade e risco nos setores de construção
+civil, indústria química, indústria em geral, saúde e qualidade.
+
+Essa visão exige integrar categorias de sistemas como ERP, WMS, MES, LIMS,
+CMMS/EAM, QMS e DMS/GED, além de arquivos e APIs externas. Ela orienta a
+arquitetura, mas não amplia automaticamente o MVP nem altera o contrato
+executável atual.
+
 ## Fora do escopo atual
 
 - substituir o ERP ou controlar todo o estoque;
