@@ -1,5 +1,70 @@
 # Arquitetura - LOG_VENCIMENTOS
 
+## Estado de implementação em 2026-07-01
+
+O primeiro backend executável foi publicado no repositório público
+[`thiagoryansalazar/LOG_VENCIMENTOS`](https://github.com/thiagoryansalazar/LOG_VENCIMENTOS),
+commit inicial `13a533c`.
+
+A implementação atual confirma a escolha de Python, Django e Django REST
+Framework e separa as responsabilidades internas desta forma:
+
+```text
+Cliente HTTP
+  → src/routes
+  → src/validators
+  → src/models
+  → src/services
+  → resposta HTTP/JSON
+
+src/integrations
+  → reservado para conectores futuros
+```
+
+### Componentes implementados
+
+- `config/`: configuração Django, URLs e ponto WSGI.
+- `src/routes/`: transporte HTTP e composição das respostas.
+- `src/validators/`: validação e normalização do lote recebido.
+- `src/models/`: entidade de domínio `Lote`, sem persistência de estoque.
+- `src/services/`: cálculo de dias restantes e classificação de risco.
+- `src/integrations/`: fronteira criada, ainda sem conector real.
+
+Rotas disponíveis:
+
+```text
+GET  /health
+POST /lotes/validar
+```
+
+A classificação técnica inicial é:
+
+| Dias restantes | Classificação |
+|---|---|
+| menor que 0 | `VENCIDO` |
+| de 0 a 7 | `CRITICO` |
+| de 8 a 30 | `ATENCAO` |
+| acima de 30 | `NORMAL` |
+
+Essas faixas estão implementadas e testadas, mas ainda precisam de validação de
+negócio com uma empresa real.
+
+### Limites da implementação atual
+
+- SQLite é usado somente no ambiente inicial de desenvolvimento.
+- PostgreSQL continua sendo o destino previsto para memória operacional.
+- RabbitMQ, Celery Worker e Celery Beat ainda não foram implementados.
+- Não existe integração real com ERP, banco externo ou CSV/XLSX.
+- Não existe frontend nem autenticação avançada.
+- O contrato executável atual exige `codigo_produto`, `nome_produto`, `lote`,
+  `quantidade`, `data_validade` e `local`.
+- O campo canônico `status` ainda não faz parte da validação executável; sua
+  semântica, origem e obrigatoriedade continuam pendentes.
+
+O backend inicial possui sete testes automatizados cobrindo validação, rotas,
+faixas de risco e seus limites. Esta seção descreve o que existe no código; as
+seções seguintes preservam a arquitetura-alvo e as integrações planejadas.
+
 ## Arquitetura geral atualizada em 2026-06-30
 
 O desenho geral separa quatro domínios:
