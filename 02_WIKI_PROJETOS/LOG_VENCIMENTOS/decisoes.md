@@ -1,5 +1,65 @@
 # Decisões - LOG_VENCIMENTOS
 
+## 2026-07-01 — Backend inicial executável
+
+**Contexto:** a arquitetura técnica já definia Python, Django e Django REST
+Framework, mas ainda não existia uma implementação versionada do projeto.
+
+**Decisão:** iniciar o backend no repositório público
+`thiagoryansalazar/LOG_VENCIMENTOS`, mantendo transporte HTTP, validação,
+entidades de domínio, regras de negócio e futuras integrações em módulos
+separados.
+
+**Implementado:**
+
+- `GET /health` para diagnóstico básico;
+- `POST /lotes/validar` para validar o contrato inicial e classificar risco;
+- sete testes automatizados para rotas, validação e limites de classificação.
+
+**Impacto:** a arquitetura agora possui uma base executável. Essa base ainda não
+representa o monitoramento completo, a integração ERP nem a central de alertas.
+
+## 2026-07-01 — Persistência apenas de desenvolvimento
+
+**Decisão:** usar SQLite somente para permitir execução local nesta primeira
+iteração, sem criar tabelas de estoque ou transformar o LOG em fonte principal.
+
+**Destino arquitetural mantido:** PostgreSQL para a futura memória operacional.
+
+**Ainda não implementado:** PostgreSQL, RabbitMQ, Celery Worker e Celery Beat.
+
+## 2026-07-01 — Faixas técnicas iniciais de risco
+
+**Decisão técnica inicial:**
+
+```text
+VENCIDO = menos de 0 dias
+CRITICO = de 0 a 7 dias
+ATENCAO = de 8 a 30 dias
+NORMAL = acima de 30 dias
+```
+
+**Status:** implementada e testada, mas pendente de validação de negócio com uma
+empresa real. Uma mudança futura nas faixas deve ser tratada como decisão de
+produto, não apenas alteração de código.
+
+## 2026-07-01 — Escopo do contrato executável
+
+O validador inicial exige:
+
+```text
+codigo_produto
+nome_produto
+lote
+quantidade
+data_validade
+local
+```
+
+O campo `status`, previsto no contrato canônico da arquitetura, não foi incluído
+no primeiro endpoint porque sua origem, semântica e obrigatoriedade ainda não
+foram decididas. Isso é uma pendência explícita, não remoção do modelo canônico.
+
 ## 2026-06-30 — Artefato atual é a Arquitetura Geral
 
 **Contexto:** o desenho estava sendo tratado como Fluxo Geral de Funcionamento,
