@@ -1,23 +1,30 @@
 # Fluxos - LOG_VENCIMENTOS
 
-## 1. Fluxo geral de funcionamento
+## 1. Leitura lógica da Arquitetura Geral
 
-Representa o processo de negócio e a interação entre sistema e pessoas:
+O artefato reconstruído em 2026-06-30 é uma **Arquitetura Geral**, não apenas um
+fluxo de funcionamento. A leitura abaixo explica as relações desenhadas:
 
 ```text
-Empresa registra o lote em seu sistema
-  → LOG consulta a fonte autorizada
-  → integração normaliza e valida
+Fornecedor entrega o lote
+  → conferente aceita ou rejeita
+  → se aceito, a empresa registra os dados no ERP
+  → Adaptador de Consulta ERP consulta o Repositório de Lotes do ERP
+  → adaptador encaminha os dados ao LOG
   → monitoramento calcula o risco
-  → central notifica o gestor
+  → serviço de alertas notifica o gestor
   → gestor analisa indicadores e direciona a conferência
-  → conferente/repositor verifica o produto
-  → resultado e ação são registrados
-  → monitoramento recalcula o estado
+  → repositor verifica o lote fisicamente
+  → resultado retorna ao gestor
+  → gestor atualiza o Repositório de Lotes do ERP
+  → adaptador realiza uma nova consulta
 ```
 
-Esse desenho deve mostrar o `Limite do Sistema`, os participantes externos e
-quais decisões são do sistema ou de uma pessoa.
+O sentido da seta de consulta deve partir do `Adaptador de Consulta ERP` e
+apontar para o repositório do ERP, pois o adaptador inicia a consulta.
+
+O desenho deve mostrar os limites entre mundo físico, ERP, LOG_VENCIMENTOS e
+operação humana.
 
 ### Decisões
 
@@ -26,6 +33,17 @@ quais decisões são do sistema ou de uma pessoa.
 - **Operação:** confirmar a condição física e executar a ação.
 
 O gestor pode consultar indicadores e também comunicar diretamente a equipe.
+
+### Regra central
+
+```text
+ERP armazena.
+Adaptador consulta.
+LOG_VENCIMENTOS monitora e alerta.
+Gestor decide.
+Repositor confere.
+Gestor atualiza o ERP.
+```
 
 ## 2. Fluxo técnico do LOG_VENCIMENTOS
 

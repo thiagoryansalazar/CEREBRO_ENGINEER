@@ -1,5 +1,30 @@
 # Erros e soluções - LOG_VENCIMENTOS
 
+## Tratar a Arquitetura Geral apenas como fluxo temporal
+
+- **Problema:** reduz o desenho a uma sequência de eventos e esconde
+  dependências, fronteiras e responsabilidades.
+- **Solução:** apresentar o artefato como Arquitetura Geral, separando mundo
+  físico, ERP, LOG_VENCIMENTOS e operação humana.
+- **Prevenção:** usar setas com verbos explícitos, como `consulta dados`, `envia
+  alerta`, `informa resultado` e `atualiza ERP`.
+
+## Nomear o adaptador como “Atuador PY”
+
+- **Problema:** o nome descreve uma possível tecnologia, mas não explica a
+  responsabilidade do componente.
+- **Solução:** usar `Adaptador de Consulta ERP`.
+- **Prevenção:** nomear blocos da arquitetura geral pela função; escolher
+  linguagem e framework no fluxo técnico.
+
+## Inverter a seta de consulta ao ERP
+
+- **Problema:** uma seta saindo do banco sugere que o ERP inicia o envio.
+- **Solução:** representar `Adaptador de Consulta ERP → consulta dados →
+  Repositório de Lotes do ERP`.
+- **Prevenção:** identificar quem inicia cada interação antes de desenhar a
+  seta.
+
 ## Tratar o LOG como banco principal do estoque
 
 - **Problema:** duplica o trabalho que o ERP já executa.
@@ -21,7 +46,8 @@
 ## Misturar fluxo operacional e fluxo técnico
 
 - **Problema:** tecnologias e decisões humanas ficam ambíguas.
-- **Solução:** manter um fluxo geral de negócio e outro interno do software.
+- **Solução:** manter a Arquitetura Geral separada do fluxo técnico interno do
+  software.
 
 ## Desenhar DRF como serviço separado do Django
 

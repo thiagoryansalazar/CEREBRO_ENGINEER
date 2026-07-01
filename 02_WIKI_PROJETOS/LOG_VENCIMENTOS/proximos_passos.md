@@ -9,8 +9,12 @@
 - [ ] Decidir a estratégia da memória operacional: projeção, cache, frequência
       de sincronização e retenção.
 - [ ] Definir como divergências físicas retornam ao fluxo sem corromper a fonte.
-- [ ] Atualizar os diagramas geral e técnico com a fonte externa e a camada de
-      integração.
+- [x] Atualizar a Arquitetura Geral com ERP, Repositório de Lotes e Adaptador de
+      Consulta ERP.
+- [ ] Atualizar o diagrama técnico detalhando conector, mapeamento, validação e
+      normalização.
+- [ ] Confirmar com o primeiro ERP se o adaptador usará API, banco somente
+      leitura ou exportação de arquivo.
 
 ## Prioridade média
 

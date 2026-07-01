@@ -1,5 +1,36 @@
 # Decisões - LOG_VENCIMENTOS
 
+## 2026-06-30 — Artefato atual é a Arquitetura Geral
+
+**Contexto:** o desenho estava sendo tratado como Fluxo Geral de Funcionamento,
+mas a versão recriada tem outro objetivo.
+
+**Decisão:** o artefato atual representa a **Arquitetura Geral do
+LOG_VENCIMENTOS**. Ele mostra os fatores dos quais o sistema depende, os limites
+entre mundo físico, ERP, LOG_VENCIMENTOS e operação humana, além das relações
+entre esses blocos.
+
+**Impacto:** as setas indicam dependência, consulta, envio de dados e retorno
+operacional. Elas não devem ser interpretadas somente como uma sequência
+temporal de telas ou tecnologias.
+
+## 2026-06-30 — Adaptador de Consulta ERP
+
+**Decisão:** usar o nome `Adaptador de Consulta ERP` no lugar de `Atuador PY`.
+
+**Responsabilidade:** o adaptador é o elemento ativo que acessa o banco ou
+repositório de lotes mantido pelo ERP e entrega os dados necessários às camadas
+do LOG_VENCIMENTOS.
+
+**Direção obrigatória da relação:**
+
+```text
+Adaptador de Consulta ERP → consulta dados → Repositório de Lotes do ERP
+```
+
+**Motivo:** o nome descreve a responsabilidade arquitetural sem vincular o
+componente prematuramente à linguagem Python.
+
 ## 2026-06-29 — Fonte de verdade externa
 
 **Contexto:** a hipótese inicial armazenava os lotes no banco principal do
@@ -58,6 +89,10 @@ obrigatoriedade e a origem do campo `status` ainda precisam ser validadas.
   interna do software.
 
 Misturar os dois reduz a clareza do projeto.
+
+> Atualização de 2026-06-30: o artefato geral em reconstrução passou a ser
+> tratado como **Arquitetura Geral**, pois seu objetivo atual é representar
+> dependências e responsabilidades, não somente o fluxo de funcionamento.
 
 ## 2026-06-29 — Limite do produto
 

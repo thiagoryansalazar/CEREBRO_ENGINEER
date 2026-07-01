@@ -1,5 +1,57 @@
 # Arquitetura - LOG_VENCIMENTOS
 
+## Arquitetura geral atualizada em 2026-06-30
+
+O desenho geral separa quatro domínios:
+
+1. mundo físico;
+2. sistema ERP da empresa;
+3. LOG_VENCIMENTOS;
+4. operação humana de decisão e conferência.
+
+```text
+Fornecedor
+  → entrega lote
+  → Conferente
+  → lote aceito?
+      ├─ não → retorna ao fornecedor
+      └─ sim → dados do lote → Repositório de Lotes do ERP
+
+LOG_VENCIMENTOS
+  └─ Adaptador de Consulta ERP
+       ├─ consulta → Repositório de Lotes do ERP
+       ├─ envia dados → Monitoramento de Vencimentos
+       └─ envia dados → Serviço de Alertas
+
+Serviço de Alertas
+  → alerta Gestor
+
+Gestor
+  ├─ consulta Monitoramento de Vencimentos
+  └─ orienta Repositor
+       → realiza conferência física
+       → gera resultado
+       → informa Gestor
+       → Gestor atualiza Repositório de Lotes do ERP
+
+Repositório atualizado
+  → nova consulta pelo Adaptador de Consulta ERP
+```
+
+### Responsabilidades principais
+
+- **ERP:** armazenar os dados operacionais dos lotes.
+- **Adaptador de Consulta ERP:** iniciar o acesso ao repositório do ERP e
+  encaminhar os dados necessários ao LOG.
+- **Monitoramento de Vencimentos:** analisar prazos, criticidade e indicadores.
+- **Serviço de Alertas:** notificar o gestor sobre situações que exigem atenção.
+- **Gestor:** consultar indicadores, direcionar a operação e atualizar o ERP.
+- **Repositor:** verificar fisicamente os lotes e informar o resultado.
+
+O adaptador representa uma responsabilidade lógica. A forma concreta de acesso
+— API, banco somente leitura ou arquivo exportado — continua sendo uma decisão
+de integração a ser validada com cada ERP.
+
 ## Visão geral vigente
 
 ```text
@@ -40,6 +92,10 @@ Formas previstas de conexão:
 
 Cada fonte usa um conector específico. Depois do conector, o restante do sistema
 trabalha com o mesmo modelo.
+
+Na Arquitetura Geral, essa responsabilidade é resumida pelo bloco `Adaptador de
+Consulta ERP`. No fluxo técnico, o bloco pode ser detalhado em conector,
+mapeador, validador e normalizador.
 
 ## Contrato de dados inicial
 
