@@ -25,6 +25,7 @@ orientada.
 ## Requisitos essenciais
 
 - conectar-se a uma fonte de dados autorizada;
+- admitir evento, consulta agendada ou arquivo conforme a porta disponível;
 - normalizar diferentes formatos;
 - validar lote e data de validade;
 - configurar regras e janelas de alerta;
@@ -33,6 +34,16 @@ orientada.
 - registrar conferência, decisão e ação;
 - exibir indicadores;
 - manter histórico e trilha operacional.
+
+## Escopo atual e visão futura
+
+O produto atual atende o setor alimentício e monitora produtos, lotes e datas de
+validade. Essa especialização deve ser preservada durante a validação do MVP.
+
+A visão futura é transformar o núcleo em um monitor de vencimentos, prazos,
+conformidade e risco aplicável também à construção civil, indústria química,
+indústria em geral, saúde e qualidade. Essa evolução depende de evidência de
+produto e da validação de um contrato de dados mais genérico.
 
 ## Critérios de produto
 
@@ -48,7 +59,8 @@ Cada melhoria deve responder:
 
 - **Agora:** integração, contrato de dados, monitoramento, alertas e feedback.
 - **Depois:** conectores adicionais e captura assistida para fontes precárias.
-- **Futuro:** OCR/IA, scanner integrado, IoT e sinalização física.
+- **Futuro:** generalização multissetorial validada, OCR/IA, scanner integrado,
+  IoT e sinalização física.
 
 ## Indicadores a definir
 
