@@ -2,12 +2,28 @@
 
 Estas ideias não são compromisso de implementação.
 
-## Integração
+## Integração externa
 
+- Criar interfaces e mocks para conectores antes de integrar fornecedores reais.
+- Organizar o catálogo de conectores por categoria de sistema: ERP, WMS, MES,
+  LIMS, CMMS/EAM, QMS, DMS/GED, arquivos e APIs externas.
+- Considerar endpoints como `/integrations/webhook`, `/integrations/import` e
+  `/integrations/test-connection` somente após definir autenticação e contrato.
+- Validar se o evento carrega apenas identificador e dados mínimos ou o registro
+  completo.
 - Criar catálogo de conectores por ERP ou tipo de fonte.
 - Permitir mapeamento assistido de colunas CSV/XLSX.
 - Versionar contrato de dados e mapeamentos.
 - Oferecer diagnóstico de qualidade antes de ativar o monitoramento.
+
+## Contrato genérico futuro
+
+- Avaliar `entidade_monitorada`, `tipo_vencimento` e `data_limite` como campos
+  comuns para outros domínios.
+- Manter tradução explícita entre esse modelo e o contrato atual de produto,
+  lote e validade.
+- Não alterar o contrato executável até validar casos reais fora do setor
+  alimentício.
 
 ## Captura assistida
 
