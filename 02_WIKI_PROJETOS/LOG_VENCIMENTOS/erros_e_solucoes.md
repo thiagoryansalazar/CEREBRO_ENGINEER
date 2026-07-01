@@ -1,5 +1,38 @@
 # Erros e soluções - LOG_VENCIMENTOS
 
+## Consultar continuamente o ERP sem necessidade
+
+- **Problema:** polling constante aumenta carga, custo e acoplamento com a fonte.
+- **Solução:** priorizar eventos; quando não existirem, usar consulta agendada ou
+  importação de arquivo conforme a capacidade da fonte.
+- **Prevenção:** definir explicitamente o gatilho e a frequência de cada
+  integração.
+
+## Projetar a integração pela linguagem do sistema de origem
+
+- **Problema:** PHP, Java, Node.js, Elixir, Delphi ou .NET não determinam como o
+  LOG deve integrar.
+- **Solução:** projetar pela porta disponível: webhook, API, banco, arquivo ou
+  fila.
+- **Prevenção:** levantar contratos, autenticação, estabilidade e autorização da
+  interface antes de escolher o conector.
+
+## Tornar webhook obrigatório
+
+- **Problema:** sistemas legados ou restritos podem não publicar eventos.
+- **Solução:** manter três modos compatíveis: evento, consulta agendada e
+  importação de arquivo.
+- **Prevenção:** fazer todos os modos convergirem para a mesma validação e
+  normalização.
+
+## Generalizar o contrato executável cedo demais
+
+- **Problema:** campos genéricos podem apagar regras já validadas para produto,
+  lote e validade.
+- **Solução:** tratar `entidade_monitorada`, `tipo_vencimento` e `data_limite`
+  como proposta até validação.
+- **Prevenção:** separar visão futura do contrato realmente implementado.
+
 ## Tratar a Arquitetura Geral apenas como fluxo temporal
 
 - **Problema:** reduz o desenho a uma sequência de eventos e esconde
