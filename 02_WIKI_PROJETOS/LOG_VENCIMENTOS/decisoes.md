@@ -1,5 +1,44 @@
 # Decisões - LOG_VENCIMENTOS
 
+## 2026-07-01 — Integração orientada a eventos com alternativas
+
+**Decisão:** quando o sistema de origem oferecer eventos, o LOG_VENCIMENTOS deve agir somente após uma alteração relevante, evitando consultas contínuas sem necessidade.
+
+```text
+Sistema de origem
+  → dispara evento
+  → receptor valida e registra
+  → fila organiza o processamento
+  → adaptador consulta os dados necessários
+  → normalizador converte para o modelo LOG
+  → monitoramento calcula risco
+  → central avalia alertas
+```
+
+Eventos relevantes incluem novo registro, atualização, remoção, mudança de quantidade, correção de data e transferência de local.
+
+**Alternativas obrigatórias:** a arquitetura não pode depender apenas de webhook. Deve aceitar:
+
+1. evento ou webhook;
+2. consulta programada por API ou banco autorizado;
+3. importação de arquivo.
+
+## 2026-07-01 — Camada de Integração Externa
+
+**Decisão:** manter o backend atual e criar uma `Camada de Integração Externa` desacoplada do monitoramento.
+
+**Princípio:** a linguagem usada pelo sistema externo não é o critério de compatibilidade. A integração depende da porta disponível: API, webhook, evento, banco somente leitura, arquivo ou SFTP.
+
+A camada deve usar adaptadores por fonte e entregar todos os dados ao mesmo normalizador e contrato interno.
+
+## 2026-07-01 — Escopo atual e visão futura
+
+**Decisão:** o setor alimentício permanece como primeiro caso de uso e escopo de validação atual.
+
+**Visão futura:** a arquitetura deve permitir monitorar vencimentos, prazos, conformidade e risco operacional em outros domínios, como construção civil, química, indústria, saúde e qualidade.
+
+Essa visão não autoriza ampliar o MVP agora. A generalização do modelo de dados precisa ser validada antes de substituir o contrato executável de lotes.
+
 ## 2026-07-01 — Backend inicial executável
 
 **Contexto:** a arquitetura técnica já definia Python, Django e Django REST
