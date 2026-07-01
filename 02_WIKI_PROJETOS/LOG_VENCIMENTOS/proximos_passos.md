@@ -9,9 +9,21 @@
 - [x] Implementar `GET /health` e `POST /lotes/validar`.
 - [x] Implementar e testar faixas técnicas iniciais de risco.
 - [x] Registrar o primeiro ciclo PDCA e executar sete testes automatizados.
+- [x] Registrar a arquitetura orientada a eventos e suas alternativas de
+      integração na Wiki.
 
 ## Prioridade alta
 
+- [ ] Definir o contrato canônico do evento: identificador, dados mínimos,
+      versão, origem, data e chave de idempotência.
+- [ ] Definir autenticação, autorização, repetição, replay e tratamento de evento
+      duplicado ou fora de ordem.
+- [ ] Escolher a primeira categoria de sistema e o primeiro modo real de
+      integração: evento, consulta agendada ou arquivo.
+- [ ] Atualizar o diagrama técnico com receptor de eventos, fila e Camada de
+      Integração Externa.
+- [ ] Validar `entidade_monitorada`, `tipo_vencimento` e `data_limite` antes de
+      qualquer alteração no contrato executável.
 - [ ] Validar com uma empresa real qual é a fonte de verdade dos lotes.
 - [ ] Escolher o primeiro caminho de integração: API, banco somente leitura ou
       CSV/XLSX exportado.
@@ -23,10 +35,10 @@
 - [ ] Definir como divergências físicas retornam ao fluxo sem corromper a fonte.
 - [x] Atualizar a Arquitetura Geral com ERP, Repositório de Lotes e Adaptador de
       Consulta ERP.
-- [ ] Atualizar o diagrama técnico detalhando conector, mapeamento, validação e
-      normalização.
-- [ ] Confirmar com o primeiro ERP se o adaptador usará API, banco somente
-      leitura ou exportação de arquivo.
+- [x] Atualizar a documentação técnica detalhando eventos, conectores,
+      mapeamento, validação e normalização.
+- [ ] Confirmar com o primeiro sistema de origem qual porta autorizada será
+      usada.
 
 ## Prioridade média
 
@@ -45,6 +57,8 @@
 
 ## Futuro
 
+- [ ] Validar um segundo domínio antes de generalizar o produto para outros
+      setores.
 - [ ] Avaliar scanner e OCR/IA para fontes sem dados estruturados.
 - [ ] Executar laboratório de comunicação com ESP32 somente após os alertas
       digitais funcionarem.
